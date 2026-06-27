@@ -9,86 +9,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --page-bg:#E8E4DC;
-    --page-ink:#2A2722;
-    --page-muted:#6F695F;
-    --sans:'Inter',system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
+    --page-bg:#E8E4DC;--page-ink:#2A2722;--page-muted:#6F695F;
+    --sans:'Inter',system-ui,-apple-system,sans-serif;
     --serif:'Fraunces',Georgia,'Times New Roman',serif;
-    --maxw:1080px;
-    --radius:16px;
+    --maxw:1080px;--radius:16px;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;background:var(--page-bg);color:var(--page-ink);
-    font-family:var(--sans);line-height:1.55;
-    padding:clamp(20px,5vw,56px) clamp(16px,4vw,40px) 80px;
-  }
+  body{margin:0;background:var(--page-bg);color:var(--page-ink);font-family:var(--sans);line-height:1.55;padding:clamp(20px,5vw,56px) clamp(16px,4vw,40px) 80px}
   .wrap{max-width:var(--maxw);margin:0 auto}
 
-  /* ---------- intro ---------- */
   .intro{max-width:720px;margin:0 auto clamp(28px,5vw,52px)}
-  .kicker{
-    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--page-muted);font-weight:600;margin:0 0 14px;
-  }
-  .intro h1{
-    font-family:var(--serif);font-weight:500;font-optical-sizing:auto;
-    font-size:clamp(28px,5.6vw,44px);line-height:1.08;letter-spacing:-.01em;
-    margin:0 0 18px;
-  }
+  .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--page-muted);font-weight:600;margin:0 0 14px}
+  .intro h1{font-family:var(--serif);font-weight:500;font-size:clamp(28px,5.6vw,44px);line-height:1.08;letter-spacing:-.01em;margin:0 0 18px}
   .intro p{font-size:clamp(15px,2.4vw,17px);color:#403B34;margin:0 0 14px}
-  .intro .ask{
-    background:#FBFAF7;border:1px solid #D7D1C6;border-radius:12px;
-    padding:16px 18px;font-size:15px;color:#332F29;
-  }
+  .intro .ask{background:#FBFAF7;border:1px solid #D7D1C6;border-radius:12px;padding:16px 18px;font-size:15px;color:#332F29}
   .intro .ask b{color:var(--page-ink)}
 
-  /* ---------- grid of territories ---------- */
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.6vw,26px)}
-  @media (max-width:760px){.grid{grid-template-columns:1fr}}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
 
-  .sheet{
-    position:relative;border-radius:var(--radius);overflow:hidden;
-    box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -28px rgba(0,0,0,.45);
-    border:1px solid rgba(0,0,0,.06);
-    background:var(--bg);color:var(--ink);
-    display:flex;flex-direction:column;
-  }
+  .sheet{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -28px rgba(0,0,0,.45);border:1px solid rgba(0,0,0,.06);background:var(--bg);color:var(--ink);display:flex;flex-direction:column}
   .sheet-inner{padding:clamp(20px,3vw,30px)}
+  .badge{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--sans);font-weight:700;font-size:14px;background:rgba(0,0,0,.06);color:var(--ink);z-index:2}
 
-  .badge{
-    position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;
-    display:grid;place-items:center;font-family:var(--sans);font-weight:700;font-size:14px;
-    background:rgba(0,0,0,.06);color:var(--ink);z-index:2;
-  }
-
-  /* lockup */
   .lockup{margin-bottom:22px}
   .wordmark{margin:0;line-height:1}
   .tag{margin:9px 0 0;font-size:12.5px;color:var(--muted);letter-spacing:.01em}
 
-  /* mocks row */
   .mocks{display:flex;gap:16px;flex-wrap:wrap}
-  .phone{
-    flex:1 1 150px;min-width:150px;max-width:200px;aspect-ratio:9/16;
-    border-radius:18px;background:var(--social-bg);
-    border:1px solid var(--line);
-    padding:18px 15px;display:flex;flex-direction:column;justify-content:space-between;
-  }
+  .phone{flex:1 1 150px;min-width:150px;max-width:200px;aspect-ratio:9/16;border-radius:18px;background:var(--social-bg);border:1px solid var(--line);padding:18px 15px;display:flex;flex-direction:column;justify-content:space-between}
   .hook{margin:8px 0 0}
   .handle{font-size:10.5px;color:var(--muted);letter-spacing:.02em}
-
-  .doc{
-    flex:1 1 200px;min-width:200px;background:var(--doc-bg);
-    border:1px solid var(--line);border-radius:8px;padding:18px 16px;
-    display:flex;flex-direction:column;gap:12px;
-  }
+  .doc{flex:1 1 200px;min-width:200px;background:var(--doc-bg);border:1px solid var(--line);border-radius:8px;padding:18px 16px;display:flex;flex-direction:column;gap:12px}
   .doc-eyebrow{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
   .doc-title{margin:0;line-height:1.05}
-  .doc-sub{font-size:11px;color:var(--muted);margin-top:-6px}
 
-  /* comparison: rows */
   .cmp-rows{display:flex;flex-direction:column;gap:10px;margin-top:2px}
   .cmp-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
   .cmp-label{font-size:11px;color:var(--muted)}
@@ -96,7 +52,6 @@
   .cmp-val.up{color:var(--accent)}
   .cmp-rule{height:1px;background:var(--line)}
 
-  /* comparison: columns (editorial) */
   .cmp-cols{display:grid;grid-template-columns:1fr 1px 1fr;gap:12px;margin-top:4px}
   .cmp-cols .div{background:var(--line)}
   .cmp-col .lab{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -104,59 +59,37 @@
   .cmp-col .fig.up{color:var(--accent)}
   .cmp-col .unit{font-size:10px;color:var(--muted)}
 
-  /* comparison: bars (reference) */
   .cmp-bars{display:flex;flex-direction:column;gap:7px;margin-top:2px}
   .bar-lab{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:var(--ink)}
   .bar{height:14px;border-radius:3px}
   .bar.short{width:34%;background:#C9C9C5}
   .bar.long{width:100%;background:var(--accent)}
 
-  /* pick button */
   .pick-wrap{margin-top:auto;padding:14px clamp(20px,3vw,30px) clamp(18px,3vw,26px)}
-  .pick{
-    width:100%;border:1px solid var(--line);background:transparent;color:var(--ink);
-    font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.01em;
-    padding:11px 14px;border-radius:9px;cursor:pointer;transition:all .15s ease;
-  }
+  .pick{width:100%;border:1px solid var(--line);background:transparent;color:var(--ink);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.01em;padding:11px 14px;border-radius:9px;cursor:pointer;transition:all .15s ease}
   .pick:hover{border-color:var(--accent);color:var(--accent)}
   .sheet.selected{outline:2.5px solid var(--accent);outline-offset:-1px}
   .sheet.selected .pick{background:var(--accent);color:var(--bg);border-color:var(--accent)}
 
-  /* ================= TERRITORY A — sans, ink + warm neutral ================= */
-  .t-a{
-    --bg:#F6F3EE;--ink:#15222E;--muted:#6B7682;--line:#DED8CD;
-    --accent:#23544F;--social-bg:#FBFAF7;--doc-bg:#FFFFFF;
-  }
+  .t-a{--bg:#F6F3EE;--ink:#15222E;--muted:#6B7682;--line:#DED8CD;--accent:#23544F;--social-bg:#FBFAF7;--doc-bg:#FFFFFF}
   .t-a .wordmark{font-family:var(--sans);font-weight:600;font-size:23px;letter-spacing:-.01em;color:var(--ink)}
   .t-a .hook{font-family:var(--sans);font-weight:600;font-size:17px;line-height:1.22;color:var(--ink)}
   .t-a .doc-title{font-family:var(--sans);font-weight:600;font-size:18px;letter-spacing:-.01em}
 
-  /* ================= TERRITORY B — editorial serif, paper + oxblood ================= */
-  .t-b{
-    --bg:#F3EEE4;--ink:#1B1916;--muted:#766D5F;--line:#DAD2C3;
-    --accent:#6E2C2C;--social-bg:#F8F4EC;--doc-bg:#FBF8F1;
-  }
-  .t-b .wordmark{font-family:var(--serif);font-weight:500;font-size:25px;letter-spacing:0;color:var(--ink)}
+  .t-b{--bg:#F3EEE4;--ink:#1B1916;--muted:#766D5F;--line:#DAD2C3;--accent:#6E2C2C;--social-bg:#F8F4EC;--doc-bg:#FBF8F1}
+  .t-b .wordmark{font-family:var(--serif);font-weight:500;font-size:25px;color:var(--ink)}
   .t-b .hook{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.18;color:var(--ink)}
   .t-b .doc-title{font-family:var(--serif);font-weight:500;font-size:21px}
   .t-b .tag{font-style:italic}
 
-  /* ================= TERRITORY C — warm blend, cream + living teal ================= */
-  .t-c{
-    --bg:#F7F2E8;--ink:#21282C;--muted:#5F6A64;--line:#E0D8C8;
-    --accent:#347067;--social-bg:#FCF9F2;--doc-bg:#FFFEFB;
-  }
+  .t-c{--bg:#F7F2E8;--ink:#21282C;--muted:#5F6A64;--line:#E0D8C8;--accent:#347067;--social-bg:#FCF9F2;--doc-bg:#FFFEFB}
   .t-c .wordmark{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--ink)}
   .t-c .wordmark .dot{color:var(--accent)}
   .t-c .hook{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.22;color:var(--ink)}
   .t-c .hook u{text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
   .t-c .doc-title{font-family:var(--serif);font-weight:500;font-size:20px}
 
-  /* ================= TERRITORY D — reference: heavy caps, white + bright teal + bars ===== */
-  .t-d{
-    --bg:#FFFFFF;--ink:#111111;--muted:#8A8A86;--line:#ECECEA;
-    --accent:#00B8A9;--social-bg:#F5F5F3;--doc-bg:#FFFFFF;
-  }
+  .t-d{--bg:#FFFFFF;--ink:#111111;--muted:#8A8A86;--line:#ECECEA;--accent:#00B8A9;--social-bg:#F5F5F3;--doc-bg:#FFFFFF}
   .t-d .wordmark{font-family:var(--sans);font-weight:800;font-size:20px;letter-spacing:-.01em;text-transform:uppercase;color:var(--ink)}
   .t-d .tag{text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:700;color:var(--accent)}
   .t-d .hook{font-family:var(--sans);font-weight:800;font-size:17px;line-height:1.15;text-transform:uppercase;color:var(--ink)}
@@ -165,34 +98,22 @@
   .t-d .doc-title{font-family:var(--sans);font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:-.01em}
   .t-d .doc{border-top:4px solid var(--accent)}
 
-  /* ---------- footer choice ---------- */
   .footer{max-width:720px;margin:clamp(28px,5vw,44px) auto 0;text-align:center}
-  .choice{
-    font-size:16px;color:var(--page-ink);background:#FBFAF7;border:1px solid #D7D1C6;
-    border-radius:12px;padding:16px 18px;
-  }
+  .choice{font-size:16px;color:var(--page-ink);background:#FBFAF7;border:1px solid #D7D1C6;border-radius:12px;padding:16px 18px}
   .choice b{font-weight:700}
-  .muted-note{font-size:12.5px;color:var(--page-muted);margin-top:14px}
 
-  /* botão whatsapp */
-  .wa-btn{
-    display:none;align-items:center;justify-content:center;gap:10px;
-    margin-top:16px;width:100%;padding:14px 20px;
-    border-radius:12px;border:none;cursor:pointer;
-    background:#25D366;color:#fff;
-    font-family:var(--sans);font-size:15px;font-weight:700;
-    text-decoration:none;transition:background .15s;
-  }
-  .wa-btn:hover{background:#1db954}
-  .wa-btn svg{flex-shrink:0}
-  .wa-btn.visible{display:flex}
+  textarea#comentario{display:none;width:100%;margin-top:12px;padding:12px 14px;border-radius:10px;border:1px solid #D7D1C6;font-family:var(--sans);font-size:14px;color:var(--page-ink);background:#FBFAF7;resize:vertical}
 
-  .change-btn{
-    display:none;background:none;border:none;cursor:pointer;
-    font-family:var(--sans);font-size:13px;color:var(--page-muted);
-    text-decoration:underline;margin-top:10px;padding:0;
-  }
+  .send-btn{display:none;align-items:center;justify-content:center;gap:9px;margin-top:12px;width:100%;padding:13px 20px;border-radius:12px;border:none;cursor:pointer;background:#2A2722;color:#fff;font-family:var(--sans);font-size:15px;font-weight:700;transition:background .15s}
+  .send-btn:hover{background:#3d3830}
+  .send-btn.visible{display:flex}
+  .send-btn:disabled{background:#999;cursor:not-allowed}
+  .send-btn.sent{background:#2e7d32;cursor:default}
+
+  .change-btn{display:none;background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:13px;color:var(--page-muted);text-decoration:underline;margin-top:10px;padding:0}
   .change-btn.visible{display:inline-block}
+  .status-err{font-size:13px;color:#b00;margin-top:8px;display:none}
+  .muted-note{font-size:12.5px;color:var(--page-muted);margin-top:14px}
 </style>
 </head>
 <body>
@@ -203,13 +124,12 @@
     <h1>Qual destas marcas você confiaria mais?</h1>
     <p>Estou definindo a identidade visual da minha consultoria. Abaixo estão <b>4 versões da mesma marca</b>, aplicadas exatamente às mesmas peças — o logo, um post e uma página de entregável. Só o estilo muda; o conteúdo é idêntico.</p>
     <div class="ask">
-      Imagine que você vai <b>contratar um especialista</b> para reposicionar e precificar melhor o seu serviço. Olhando rápido, sem analisar demais: <b>qual destas marcas passa mais confiança e credibilidade pra você?</b> Toque na opção e me mande a letra — se puder, uma frase do porquê.
+      Imagine que você vai <b>contratar um especialista</b> para reposicionar e precificar melhor o seu serviço. Olhando rápido, sem analisar demais: <b>qual destas marcas passa mais confiança e credibilidade pra você?</b> Toque na opção e registre seu voto — se puder, uma frase do porquê.
     </div>
   </div>
 
   <div class="grid">
 
-    <!-- ===== A ===== -->
     <div class="sheet t-a" data-letter="A">
       <span class="badge">A</span>
       <div class="sheet-inner">
@@ -237,7 +157,6 @@
       <div class="pick-wrap"><button class="pick" type="button">Esta passa mais confiança</button></div>
     </div>
 
-    <!-- ===== B ===== -->
     <div class="sheet t-b" data-letter="B">
       <span class="badge">B</span>
       <div class="sheet-inner">
@@ -255,17 +174,9 @@
             <span class="doc-eyebrow">Análise de Valor</span>
             <h3 class="doc-title">Cobrança vs. valor percebido</h3>
             <div class="cmp-cols">
-              <div class="cmp-col">
-                <div class="lab">Hoje</div>
-                <div class="fig">R$ 250</div>
-                <div class="unit">por hora</div>
-              </div>
+              <div class="cmp-col"><div class="lab">Hoje</div><div class="fig">R$ 250</div><div class="unit">por hora</div></div>
               <div class="div"></div>
-              <div class="cmp-col">
-                <div class="lab">Estruturado</div>
-                <div class="fig up">R$ 6.800</div>
-                <div class="unit">por programa</div>
-              </div>
+              <div class="cmp-col"><div class="lab">Estruturado</div><div class="fig up">R$ 6.800</div><div class="unit">por programa</div></div>
             </div>
           </div>
         </div>
@@ -273,7 +184,6 @@
       <div class="pick-wrap"><button class="pick" type="button">Esta passa mais confiança</button></div>
     </div>
 
-    <!-- ===== C ===== -->
     <div class="sheet t-c" data-letter="C">
       <span class="badge">C</span>
       <div class="sheet-inner">
@@ -301,7 +211,6 @@
       <div class="pick-wrap"><button class="pick" type="button">Esta passa mais confiança</button></div>
     </div>
 
-    <!-- ===== D ===== -->
     <div class="sheet t-d" data-letter="D">
       <span class="badge">D</span>
       <div class="sheet-inner">
@@ -334,55 +243,104 @@
 
   <div class="footer">
     <div class="choice" id="choice">Sua escolha ainda não foi marcada — toque em uma das opções acima.</div>
-    <a class="wa-btn" id="wa-btn" href="#" target="_blank">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Enviar meu voto por WhatsApp
-    </a>
+    <textarea id="comentario" placeholder="Comentário opcional: o que te fez escolher essa?" rows="2"></textarea>
+    <button class="send-btn" id="send-btn" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      Registrar meu voto
+    </button>
+    <div class="status-err" id="status-err">Não foi possível registrar. Tente novamente.</div>
     <button class="change-btn" id="change-btn" type="button">Trocar minha escolha</button>
     <p class="muted-note">São só 4 versões da mesma marca. Não existe resposta certa — quero a sua reação honesta.</p>
   </div>
 
 </div>
-
 <script>
-  (function(){
-    var WA_NUMBER = '5592991840095';
-    var sheets = document.querySelectorAll('.sheet');
-    var choiceEl = document.getElementById('choice');
-    var waBtn = document.getElementById('wa-btn');
-    var changeBtn = document.getElementById('change-btn');
-    var selected = null;
+(function(){
+  var URL  = 'https://kdbcwrqobusylmahkinu.supabase.co/rest/v1/votos';
+  var KEY  = 'sb_publishable_SK6_ju_CxZwP3QyNGSh3OQ_OosAyqMC';
 
-    function select(sheet){
-      sheets.forEach(function(s){ s.classList.remove('selected'); });
-      sheet.classList.add('selected');
-      selected = sheet.getAttribute('data-letter');
-      choiceEl.innerHTML = 'Você escolheu a <b>Opção ' + selected + '</b>. Agora é só mandar o voto:';
-      var msg = encodeURIComponent('Meu voto no teste de identidade visual: *Opção ' + selected + '*. ');
-      waBtn.href = 'https://wa.me/' + WA_NUMBER + '?text=' + msg;
-      waBtn.classList.add('visible');
-      changeBtn.classList.add('visible');
-      choiceEl.scrollIntoView({behavior:'smooth', block:'center'});
-    }
+  var sheets    = document.querySelectorAll('.sheet');
+  var choiceEl  = document.getElementById('choice');
+  var sendBtn   = document.getElementById('send-btn');
+  var changeBtn = document.getElementById('change-btn');
+  var textarea  = document.getElementById('comentario');
+  var errEl     = document.getElementById('status-err');
+  var selected  = null;
+  var voted     = false;
 
-    function deselect(){
-      sheets.forEach(function(s){ s.classList.remove('selected'); });
-      selected = null;
-      choiceEl.innerHTML = 'Sua escolha ainda não foi marcada — toque em uma das opções acima.';
-      waBtn.classList.remove('visible');
-      changeBtn.classList.remove('visible');
-      window.scrollTo({top:0, behavior:'smooth'});
-    }
+  function select(sheet){
+    sheets.forEach(function(s){ s.classList.remove('selected'); });
+    sheet.classList.add('selected');
+    selected = sheet.getAttribute('data-letter');
+    choiceEl.innerHTML = 'Você escolheu a <b>Opção ' + selected + '</b>. Deixe um comentário se quiser e registre:';
+    textarea.style.display = 'block';
+    sendBtn.classList.add('visible');
+    changeBtn.classList.add('visible');
+    errEl.style.display = 'none';
+    choiceEl.scrollIntoView({behavior:'smooth', block:'center'});
+  }
 
-    sheets.forEach(function(sheet){
-      sheet.querySelector('.pick').addEventListener('click', function(){
-        if(sheet.classList.contains('selected')){ deselect(); return; }
-        select(sheet);
-      });
+  function deselect(){
+    if(voted) return;
+    sheets.forEach(function(s){ s.classList.remove('selected'); });
+    selected = null;
+    choiceEl.innerHTML = 'Sua escolha ainda não foi marcada — toque em uma das opções acima.';
+    textarea.style.display = 'none';
+    textarea.value = '';
+    sendBtn.classList.remove('visible');
+    changeBtn.classList.remove('visible');
+    errEl.style.display = 'none';
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  sheets.forEach(function(sheet){
+    sheet.querySelector('.pick').addEventListener('click', function(){
+      if(voted) return;
+      if(sheet.classList.contains('selected')){ deselect(); return; }
+      select(sheet);
     });
+  });
 
-    changeBtn.addEventListener('click', deselect);
-  })();
+  changeBtn.addEventListener('click', deselect);
+
+  sendBtn.addEventListener('click', function(){
+    if(!selected || voted) return;
+    sendBtn.disabled = true;
+    sendBtn.innerHTML = 'Registrando…';
+    errEl.style.display = 'none';
+
+    fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': KEY,
+        'Authorization': 'Bearer ' + KEY,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        opcao: selected,
+        comentario: textarea.value.trim() || null
+      })
+    })
+    .then(function(r){
+      if(r.ok || r.status === 201){
+        voted = true;
+        sendBtn.classList.add('sent');
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = '✓ Voto registrado — obrigado!';
+        changeBtn.classList.remove('visible');
+        textarea.disabled = true;
+      } else {
+        throw new Error('status ' + r.status);
+      }
+    })
+    .catch(function(){
+      sendBtn.disabled = false;
+      sendBtn.innerHTML = 'Registrar meu voto';
+      errEl.style.display = 'block';
+    });
+  });
+})();
 </script>
 </body>
 </html>
